@@ -13,6 +13,9 @@ export default {
       fontFamily: {
         serif: ['"Playfair Display"', "serif"],
       },
+      boxShadow: {
+        'gold-glow': '0 0 20px rgba(212, 175, 55, 0.2)',
+      }
     },
   },
   plugins: [],
