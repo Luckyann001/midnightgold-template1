@@ -1,0 +1,15 @@
+/* Update these in App.css or index.css */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling on mobile */
+}
+
+/* Ensure the gold gradient is vibrant */
+.gold-gradient-text {
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
