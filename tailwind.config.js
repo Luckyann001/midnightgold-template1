@@ -7,15 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        obsidian: "#050505",
-        "gold-leaf": "#D4AF37",
+        'gold-leaf': '#D4AF37',
+        'obsidian': '#050505', // This must match the name you used
       },
       fontFamily: {
-        serif: ['"Playfair Display"', "serif"],
+        serif: ['"Playfair Display"', 'serif'],
       },
-      boxShadow: {
-        'gold-glow': '0 0 20px rgba(212, 175, 55, 0.2)',
-      }
     },
   },
   plugins: [],

@@ -4,13 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html { scroll-behavior: smooth; }
-
 body {
-  margin: 0;
-  background-color: #050505; /* Obsidian Base */
+  /* Use the hex code here to avoid Vite build errors */
+  background-color: #050505; 
   color: white;
-  overflow-x: hidden;
+  margin: 0;
 }
 
 .gold-gradient-text {

@@ -1,35 +1,33 @@
 // src/components/ProductGrid.jsx
-import React from 'react';
-
-const PRODUCTS = [
-  { id: 1, name: "Obsidian Chrono", price: "12,500" },
-  { id: 2, name: "Gold Leaf Essence", price: "850" },
-  { id: 3, name: "Midnight Silhouette", price: "4,200" },
-];
-
-export default function ProductGrid() {
+export default function ProductGrid({ products = [] }) {
   return (
-    <section className="bg-obsidian py-32 px-12">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-serif italic gold-gradient-text mb-16 text-center">The Essentials</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {PRODUCTS.map((product) => (
-            <div key={product.id} className="group relative bg-white/5 border border-white/10 p-8 rounded-sm hover:shadow-gold-glow transition-all duration-500">
-              <div className="aspect-[4/5] bg-neutral-900 mb-6 overflow-hidden">
-                {/* Product Image placeholder with a hover zoom effect */}
-                <div className="w-full h-full bg-neutral-800 group-hover:scale-110 transition-transform duration-700" />
+    <section className="max-w-6xl mx-auto px-6 py-24">
+      {products.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+          {products.map((p) => (
+            <div key={p.id} className="group cursor-pointer flex flex-col items-center text-center">
+              <div className="aspect-[3/4] w-full bg-neutral-900 border border-white/5 overflow-hidden group-hover:border-gold-leaf/30 transition-all duration-700">
+                <img 
+                  src={p.image_url} 
+                  alt={p.name} 
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" 
+                />
               </div>
-              <h4 className="text-xl font-serif italic text-white group-hover:text-gold-leaf transition-colors">{product.name}</h4>
-              <p className="text-gold-leaf font-light tracking-widest mt-2">${product.price}</p>
-              
-              <button className="w-full mt-6 py-3 border border-gold-leaf/30 text-gold-leaf text-[10px] uppercase tracking-widest hover:bg-gold-leaf hover:text-black transition-all">
-                Add to Cart
-              </button>
+              <h3 className="mt-8 text-xl font-serif italic">{p.name}</h3>
+              <p className="text-gold-leaf font-mono text-sm mt-2 font-bold tracking-widest">
+                ${p.price}
+              </p>
             </div>
           ))}
         </div>
-      </div>
+      ) : (
+        /* Empty State: Shown if the entrepreneur removes all products */
+        <div className="text-center py-20 border border-dashed border-white/10 rounded-3xl">
+          <p className="text-gray-500 italic uppercase tracking-widest text-[10px]">
+            Inventory currently under curation...
+          </p>
+        </div>
+      )}
     </section>
   );
 }

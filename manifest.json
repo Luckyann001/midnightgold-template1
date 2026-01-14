@@ -1,7 +1,10 @@
 {
   "name": "Midnight Gold",
   "version": "1.0.0",
-  "author": "Developer",
-  "description": "Premium Obsidian and Gold luxury skin.",
-  "preview_image": "Gemini_Generated_Image_f2dx4bf2dx4bf2dx.jpg"
+  "tier": "Spark",
+  "author": "Elite Artisan",
+  "description": "Minimalist luxury skin with obsidian backgrounds and gold accents.",
+  "config": {
+    "dynamic_fields": ["storeName"]
+  }
 }
