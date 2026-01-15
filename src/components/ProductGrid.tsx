@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 // 🧞‍♂️ This is the master definition the Bot looks for
 export interface Product {

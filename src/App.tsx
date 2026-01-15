@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProductGrid, { Product } from './components/ProductGrid'; // 🧞‍♂️ Import the type from the Grid

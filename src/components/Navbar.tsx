@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 // 🧞‍♂️ Define the interface so TypeScript knows storeName is a string
 interface NavbarProps {

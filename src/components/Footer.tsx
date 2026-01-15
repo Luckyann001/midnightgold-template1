@@ -1,5 +1,4 @@
-import React from 'react';
-
+import * as React from 'react';
 // 🧞‍♂️ Define the interface so TypeScript understands the storeName prop
 interface FooterProps {
   storeName: string;
